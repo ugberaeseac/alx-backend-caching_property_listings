@@ -7,5 +7,5 @@ from .models import Property
 # Create your views here
 
 @cache_page(60 * 15)
-def properties_list(request):
+def property_list(request):
     return JsonResponse(Property.objects.all())
