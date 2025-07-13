@@ -1,3 +1,11 @@
 from django.shortcuts import render
+from django.views.decorators.cache import cache_page
+from django.http import JsonResponse
+from .models import Property
 
-# Create your views here.
+
+# Create your views here
+
+@cache_page(60 * 15)
+def properties_list(request):
+    return JsonResponse(Property.objects.all())
