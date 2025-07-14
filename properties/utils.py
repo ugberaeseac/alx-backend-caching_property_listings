@@ -10,7 +10,7 @@ from django.core.cache import cache
 from .models import Property
 
 
-def get_all_properties(request):
+def get_all_properties():
     """
     cache the Property queryset
     in Redis for one hour
