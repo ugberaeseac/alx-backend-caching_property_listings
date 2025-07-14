@@ -1,4 +1,4 @@
-# Caching in Django: Property Listings App — Django + Redis Caching
+# Caching in Django
 
 This project demonstrates efficient data caching in a Django-based property listing application, using Redis as the caching backend and PostgreSQL for persistent storage. Docker is used to containerize all services.
 
@@ -65,4 +65,3 @@ python manage.py shell
 >>> get_redis_cache_metrics()
 
 
----

@@ -1,6 +1,12 @@
+#!/usr/bin/python3
+
+"""
+Property model object
+"""
+
 from django.db import models
 
-# Create your models here
+
 
 class Property(models.Model):
     title = models.CharField(max_length=200, null=False, blank=False)

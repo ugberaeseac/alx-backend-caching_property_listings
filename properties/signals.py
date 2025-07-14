@@ -14,4 +14,6 @@ from .models import Property
 @receiver(post_save, sender=Property)
 @receiver(post_delete, sender=Property)
 def invalidate_property_list_cache(sender, instance, **kwargs):
+    """ invalidate cache on data change """
     cache.delete('all_properties')
+
